@@ -1,0 +1,14 @@
+{
+  "name": "debug_utility_tool",
+  "version": "0.0.0",
+  "description": "This is a simple debug tool that help personalize logging",
+  "main": "debug.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "debug"
+  ],
+  "author": "Elson T. Correia",
+  "license": "ISC"
+}
