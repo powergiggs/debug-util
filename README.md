@@ -1,4 +1,7 @@
 # Debug Utility Tool
+
+> installation usage logToFile customize console
+
 This is a very easy to use tool that intends to help making 
 logging and console.logging rich. This tool will allow you 
 to have detailed message of what is going on with your project 
@@ -15,6 +18,20 @@ display it nicely.
 
 The tool also comes with sub-functionality that will allow you to
 just log to a file or just console log it nicely.
+![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/console.png)
+
+## Installation 
+
+This package is avalable through npm, you can visit the page here: [debug_utility_tool](https://www.npmjs.com/package/debug_utility_tool)
+
+Use the following command to have access to it:
+
+``npm install debug_utility_tool``
+
+or
+
+Simply download this repo to you local computer, require it and start using just as follow:
+
+![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/require.png)
 
 
-<img width="408" alt="screen shot 2017-01-19 at 10 37 29 pm" src="https://cloud.githubusercontent.com/assets/13211046/22134921/b952905e-de98-11e6-96e4-f862c19214cc.png">
