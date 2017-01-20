@@ -22,13 +22,9 @@ just log to a file or just console log it nicely.
 
 ## Installation 
 
-This tool i avalable through npm and can be found at [this_link](https://www.npmjs.com/package/debug_utility_tool)
+Use the following command to install it:
 
-Download this repo to your local environment and from the command line
-navigate to this repo folder and Use the following command to install 
-all its dependencies:
-
-``npm install``
+``npm install debug_utility_tool``
 
 ## Usage
 
@@ -36,22 +32,20 @@ You can simply require it to a variable and start using it.
 
 ![require](https://raw.githubusercontent.com/ECorreia45/imgs/master/req.png)
 
-### TURN ON debug mode
+### Turn Debug Mode ON
 
-this is very __IMPORTANT__
+This module blocks any console log among your code so to use this module
+you must first turn DEBUG mode ON:
 
-Lets say you want to run server.js in debug mode through terminal:
+Lets say you want to run server.js on debug mode
 
-You would do it as follow
+``node server.js --debug true``
 
-`` node server.js --debug true``
+or
 
-or 
+``node server.js -d true``
 
-
-`` node server.js -d true``
-
-They both turn the debug mode ON
+Both ways you can set DEBUG on
 
 ### .debug
 
@@ -119,8 +113,6 @@ util.debug('what is the number?', 2, number, function (err) {
 
 This callback function is used to see if the tool did its job or failed.
 You will double check if the tool threw an error and you didnt happen to catch it.
-
-
 
 
 
