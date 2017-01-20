@@ -36,6 +36,23 @@ You can simply require it to a variable and start using it.
 
 ![require](https://raw.githubusercontent.com/ECorreia45/imgs/master/req.png)
 
+### TURN ON debug mode
+
+this is very __IMPORTANT__
+
+Lets say you want to run server.js in debug mode through terminal:
+
+You would do it as follow
+
+`` node server.js --debug true``
+
+or 
+
+
+`` node server.js -d true``
+
+They both turn the debug mode ON
+
 ### .debug
 
 The .debug funtion allows for 3 optional parameters and 1 required.
