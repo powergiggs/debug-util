@@ -4,6 +4,7 @@ const chai = require('chai')
 const rewire = require('rewire');
 const sinon = require('sinon');
 const util = rewire('../debug-util');
+const caller = rewire('../caller');
 
 const date = new Date();
 
@@ -14,8 +15,7 @@ describe('Debug Utility', () => {
   before((done)=>{
 
     this.console = {
-      log: sinon.spy()
-    };
+      log: sinon.spy()};
 
     util.__set__('console', this.console);
 
@@ -100,10 +100,17 @@ describe('Debug Utility', () => {
   it('debug function should return 0 if type is over 2', function (done) {
     process.env.DEBUG = 'true';
     util.process = ['--debug','true'];
-    util.debug('', 1 , data, (res) => {
+    util.debug('msg', 3 , data, (res) => {
       res.should.equal(0);
       done();
     } );
   });
+
+  it("Caller Function shoult return an object", (done) => {
+    let obj = caller();
+    expect(obj).to.be.a("object")
+
+    done()
+  })
 });
 
