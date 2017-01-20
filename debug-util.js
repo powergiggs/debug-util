@@ -115,6 +115,10 @@ Func: ${msg.func} | type: ${msg.ftyp} | method: ${msg.meth}
   if(callback) return callback(1);
 }
 
+if(!process.env.DEBUG){
+  console.log = () => {}
+}
+
 module.exports.debug = debug;
 module.exports.logTofile = logTofile;
 module.exports.colorAndConsole = colorAndConsole;
