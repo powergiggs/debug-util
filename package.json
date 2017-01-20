@@ -1,6 +1,6 @@
 {
   "name": "debug_utility_tool",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "This is a simple debug tool that helps personalize logging and console logging",
   "main": "debug.js",
   "scripts": {

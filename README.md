@@ -22,9 +22,11 @@ just log to a file or just console log it nicely.
 
 ## Installation 
 
-Use the following command to install it:
+download this repo to your local environment and through terminal
+navigate to the download folder destination and run this following 
+command to install it:
 
-``npm install debug_utility_tool``
+``npm install``
 
 ## Usage
 
