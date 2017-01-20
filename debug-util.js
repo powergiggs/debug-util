@@ -1,3 +1,4 @@
+"use strict";
 const chalk = require('chalk');
 const fs = require('fs');
 const callerId = require('caller-id');

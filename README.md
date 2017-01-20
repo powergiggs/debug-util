@@ -1,10 +1,5 @@
 # Debug Utility Tool
-<<<<<<< Updated upstream
 
-> installation usage logToFile customize console
-
-=======
->>>>>>> Stashed changes
 This is a very easy to use tool that intends to help making 
 logging and console.logging rich. This tool will allow you 
 to have detailed message of what is going on with your project 
@@ -21,23 +16,88 @@ display it nicely.
 
 The tool also comes with sub-functionality that will allow you to
 just log to a file or just console log it nicely.
-<<<<<<< Updated upstream
+
+
 ![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/console.png)
 
 ## Installation 
 
-This package is avalable through npm, you can visit the page here: [debug_utility_tool](https://www.npmjs.com/package/debug_utility_tool)
-
-Use the following command to have access to it:
+Use the following command to install it:
 
 ``npm install debug_utility_tool``
 
-or
+## Usage
 
-Simply download this repo to you local computer, require it and start using just as follow:
+You can simply require it to a variable and start using it.
 
-![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/require.png)
+![require](https://raw.githubusercontent.com/ECorreia45/imgs/master/req.png)
 
-=======
->>>>>>> Stashed changes
+### .debug
+
+The .debug funtion allows for 3 optional parameters and 1 required.
+
+__You must provide a message to it__
+
+`` util.debug('This message is required');``
+
+__Specify a Message Type__
+
+`` util.debug('This message is required', 1);``
+
+You can pass it a ``0``, ``1``, or ``2`` and it cannot be a string;
+
+* 0 = Error;
+* 1 = Warn;
+* 2 = Info;
+
+By default and message is set to be a ``Mesg``
+![defaultMsg](https://raw.githubusercontent.com/ECorreia45/imgs/master/defmesg.png)
+
+__Pass some DATA__
+
+
+if you simply want to check what data is returned or being processed
+you can simply pass it as the 3 argument. This means that at this point
+you must specify a message type.
+
+for example:
+
+```javascript
+
+let n = 4;
+
+function foo(number){
+    util.debug('what is the number?', 2, number)
+}
+
+foo(n);
+
+// --- outputs
+/*- Debugging -----------------
+    Time: 0:15 20
+    Info: what is the number?
+    Line: 7
+    File: /Users/ecorreia/Sites/_tests/debugTool/node_modules/caller-id/lib/caller-id.js
+    Func: getData | type: Object | method: getData
+    Data: number 4
+*/
+
+```
+
+__Callback function__
+
+```javascript
+util.debug('what is the number?', 2, number, function (err) {
+    if(err == 0){
+      // do something
+    }else{
+      // do another
+    }
+  })
+```
+
+This callback function is used to see if the tool did its job or failed.
+You will double check if the tool threw an error and you didnt happen to catch it.
+
+
 

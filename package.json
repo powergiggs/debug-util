@@ -1,8 +1,8 @@
 {
   "name": "debug_utility_tool",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "This is a simple debug tool that helps personalize logging and console logging",
-  "main": "debug.js",
+  "main": "debug-util.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,11 +18,6 @@
     "caller-id": "^0.1.0",
     "chalk": "^1.1.3",
     "eslint": "^3.13.1"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "rewire": "^2.5.2",
-    "sinon": "^1.17.7"
   },
   "engine": "node >= 6.9.4"
 }
