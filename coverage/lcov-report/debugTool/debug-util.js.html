@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for debugTool/debug-util.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">debugTool/</a> debug-util.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>58/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.3% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>55/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const chalk = require('chalk');
+const fs = require('fs');
+const callerId = require('caller-id');
+&nbsp;
+const date = new Date();
+&nbsp;
+const proc = process.argv;
+&nbsp;
+function grab(param) {
+  const i = proc.indexOf(param);
+  return (i === -1 ? null : <span class="branch-1 cbranch-no" title="branch not covered" >process.argv[i + 1])</span>;
+}
+let DEBUG = grab('--debug') || grab('-d');
+<span class="missing-if-branch" title="if path not taken" >I</span>if (DEBUG === 'true'){
+<span class="cstat-no" title="statement not covered" >  DEBUG = true;</span>
+<span class="cstat-no" title="statement not covered" >  process.env.DEBUG = 'true'</span>
+}
+&nbsp;
+function debug(msg, type, data, callback) {
+  const who = callerId.getData();
+  fs.access('./logs', (err) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(err){
+<span class="cstat-no" title="statement not covered" >      fs.mkdirSync('./logs');</span>
+    }else{
+&nbsp;
+      if(!msg){
+        console.log('You must specify a message THE LEAST. DEBUG module crashed!');
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(callback) return callback(0);
+      }
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(type &gt; 2 || typeof type == "string") {
+<span class="cstat-no" title="statement not covered" >        console.log(`type of ${type} is invalid. DEBUG module crashed! valid: int[0,1,2]`);</span>
+<span class="cstat-no" title="statement not covered" >        if(callback) <span class="cstat-no" title="statement not covered" >return callback(0);</span></span>
+      }
+      if(process.env.DEBUG === 'true') {
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof data === 'object') {
+          data = JSON.stringify(data);
+        }
+&nbsp;
+        let t = 'Mesg';
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (type === 0) {
+<span class="cstat-no" title="statement not covered" >          t = '!Err';</span>
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (type === 1) {
+          t = 'Warn';
+        } else <span class="cstat-no" title="statement not covered" >if (type === 2) {</span>
+<span class="cstat-no" title="statement not covered" >          t = 'Info';</span>
+        }
+&nbsp;
+        const logMsg = {
+          type: t,
+          mesg: msg,
+          path: who.filePath,
+          line: who.lineNumber,
+          func: who.functionName,
+          ftyp: who.typeName,
+          meth: who.methodName,
+          data: data
+        };
+&nbsp;
+        const time = `Time: ${date.getHours()}:${date.getMinutes()} ${date.getSeconds()}`;
+&nbsp;
+        colorAndConsole(logMsg, time, callback);
+      }else{
+        console.log(`You did not turn the DEBUG mode ON`);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(callback) return callback(0);
+      }
+    }
+    });
+}
+&nbsp;
+function colorAndConsole(msg, time, callback) {
+&nbsp;
+  const mode = '\n-- Debugging -----------------';
+  const blueb = chalk.bold.blue;
+  const blue = chalk.blue;
+  const green = chalk.green;
+  const magenta = chalk.magenta;
+  const cyanb = chalk.bold.cyan;
+  const cyan = chalk.cyan;
+  const redb = chalk.bold.red;
+  const red = chalk.red;
+  const yellowb = chalk.bold.yellow;
+  const yellow = chalk.yellow;
+&nbsp;
+  console.log(
+  `${mode}
+  ${green(time)}
+  ${redb(msg.type)}: ${red(msg.mesg)}
+  ${cyanb('Line')}: ${cyan(msg.line)}
+  ${yellowb('File')}: ${yellow(msg.path)}
+  Func: ${magenta(msg.func)} | type: ${magenta(msg.ftyp)} | method: ${magenta(msg.meth)}
+  ${blueb('Data')}: ${typeof msg.data} ${blue(msg.data)}\n`);
+&nbsp;
+  logTofile(msg, time, callback);
+&nbsp;
+  // if(callback) return callback(1);
+}
+&nbsp;
+function logTofile(msg, time, callback) {
+  const logMsg =
+`${time}
+${msg.type}: ${msg.mesg}
+'Line': ${msg.line}
+'File': ${msg.path}
+Func: ${msg.func} | type: ${msg.ftyp} | method: ${msg.meth}
+'Data': ${typeof msg.data} ${msg.data}\n`;
+  const file = `log_${date.getMonth() + 1}_${date.getDate()}_${date.getFullYear()}_${date.getHours()}.log`;
+  const title = `================ Log of ${date.getMonth() + 1} ${date.getDate()} ${date.getFullYear()} Hour: ${date.getHours()} =====`;
+&nbsp;
+  fs.appendFileSync(`./logs/${file}`, `\n\n${logMsg.trim()}`);
+&nbsp;
+  <span class="missing-if-branch" title="else path not taken" >E</span>if(callback) return callback(1);
+}
+&nbsp;
+module.exports.debug = debug;
+module.exports.logTofile = logTofile;
+module.exports.colorAndConsole = colorAndConsole;
+module.exports.grab = grab;
+module.exports.process = proc;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jan 19 2017 22:09:33 GMT-0500 (EST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

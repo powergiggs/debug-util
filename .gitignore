@@ -1,3 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
 .idea
-*.log
+logs
+node_modules
+test.js
