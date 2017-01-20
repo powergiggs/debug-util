@@ -1,6 +1,5 @@
 .idea
 logs
 node_modules
-test
 coverage
 test.js
