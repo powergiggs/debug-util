@@ -9,13 +9,10 @@ As developers we are constantly console.logging here and there
 to check what is returned, what is contained in a variable or 
 to simply add tracks to know how the code is executing. 
 
-This tool allow you to set a message and everything else is done
+This tool allows you to set a message and everything else is done
 for you. The tool will give you the line and file the error happened
 at, who called, what method was used and if any data was returned and
 display it nicely.
-
-The tool also comes with sub-functionality that will allow you to
-just log to a file or just console log it nicely.
 
 
 ![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/console.png)
