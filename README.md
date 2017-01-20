@@ -1,7 +1,10 @@
 # Debug Utility Tool
+<<<<<<< Updated upstream
 
 > installation usage logToFile customize console
 
+=======
+>>>>>>> Stashed changes
 This is a very easy to use tool that intends to help making 
 logging and console.logging rich. This tool will allow you 
 to have detailed message of what is going on with your project 
@@ -18,6 +21,7 @@ display it nicely.
 
 The tool also comes with sub-functionality that will allow you to
 just log to a file or just console log it nicely.
+<<<<<<< Updated upstream
 ![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/console.png)
 
 ## Installation 
@@ -34,4 +38,6 @@ Simply download this repo to you local computer, require it and start using just
 
 ![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/require.png)
 
+=======
+>>>>>>> Stashed changes
 
