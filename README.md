@@ -68,6 +68,7 @@ You can pass it a ``0``, ``1``, or ``2`` and it cannot be a string;
 * 2 = Info;
 
 By default and message is set to be a ``Mesg``
+
 ![defaultMsg](https://raw.githubusercontent.com/ECorreia45/imgs/master/defmesg.png)
 
 __Pass some DATA__
