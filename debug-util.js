@@ -19,23 +19,33 @@ if (DEBUG === 'true'){
 }
 
 function debug(msg, type, data, callback) {
+
   // get info about who made the call
   const who = caller();
+
   // verify if logs directory was create and create if not
-  fs.access('./logs', (err) => {
-    if(err){
-      fs.mkdirSync('./logs');
-    }else{
-      // make sure at least a msg was sent
-      if(!msg){
-    console.log('You must specify a message THE LEAST. DEBUG module crashed!');
-    if(callback) return callback(0);
+  if (!fs.existsSync('./logs')){
+    fs.mkdirSync('./logs');
   }
+
+  // make sure at least a msg was sent
+  if(!msg) {
+    console.log('You must specify a message THE LEAST. DEBUG module crashed!');
+    if (callback)
+      return callback(0);
+    else
+      return 0;
+  }
+
   // make sure no unknown or string type was sent
   if(type > 2 || typeof type == "string") {
     console.log(`type of ${type} is invalid. DEBUG module crashed! valid: int[0,1,2]`);
-    if(callback) return callback(0);
+    if (callback)
+      return callback(0);
+    else
+      return 0;
   }
+
   // make sure debug mode is set to true
   if(process.env.DEBUG === 'true') {
     // stringify objects is obj was passed
@@ -67,10 +77,11 @@ function debug(msg, type, data, callback) {
     // customize msg
     colorAndConsole(logMsg, time, callback);
   }else{
-    if(callback) return callback(0);
+    if (callback)
+      return callback(0);
+    else
+      return 0;
   }
-}
-});
 }
 
 function colorAndConsole(msg, time, callback) {
@@ -113,7 +124,10 @@ Func: ${msg.func} | type: ${msg.ftyp} | method: ${msg.meth}
   // append file
   fs.appendFileSync(`./logs/${file}`, `\n\n${logMsg.trim()}`);
   // return one for success
-  if(callback) return callback(1);
+  if (callback)
+    return callback(1);
+  else
+    return 1;
 }
 
 // this will disable any console.log on the page

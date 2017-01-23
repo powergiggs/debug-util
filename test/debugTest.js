@@ -41,9 +41,10 @@ describe('Debug Utility', () => {
 
   });
 
-  it('Grab function should return null', function () {
+  it('Grab function should return null', function (done) {
     const debug = util.grab('--debug');
-    expect(debug).to.equal(null)
+    expect(debug).to.equal(null);
+    done();
   });
 
   it('logTofile function should return 1', function (done) {
@@ -66,7 +67,7 @@ describe('Debug Utility', () => {
 
     expect(debug).to.equal(undefined);
 
-    done()
+    done();
 
   });
 
