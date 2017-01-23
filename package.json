@@ -4,7 +4,7 @@
   "description": "This is a better way to console log and log in general",
   "main": "debug-util.js",
   "scripts": {
-    "test": "No tests specified"
+    "test": "mocha"
   },
   "keywords": [
     "debug",

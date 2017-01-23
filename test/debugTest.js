@@ -12,7 +12,7 @@ describe('Debug Utility', () => {
 
   let msg, time, type, data, ret;
 
-  before((done)=>{
+  beforeEach((done)=>{
 
     this.console = {
       log: sinon.spy()};
@@ -37,8 +37,7 @@ describe('Debug Utility', () => {
 
     ret = 'temp';
 
-    done()
-
+    done();
   });
 
   it('Grab function should return null', function (done) {
@@ -47,29 +46,27 @@ describe('Debug Utility', () => {
     done();
   });
 
-  it('logTofile function should return 1', function (done) {
-
-    const debug = util.logTofile(msg, time, (res) => {
-      return res
-    } );
-
-    expect(debug).to.equal(1);
-
-    done()
-
-  });
-
-  it('colorAndConsole function should return 1 if debug mode is on', function (done) {
-
-    const debug = util.colorAndConsole(msg, time, (res) => {
-      return res
-    } );
-
-    expect(debug).to.equal(undefined);
-
-    done();
-
-  });
+  // it('logTofile function should return 1', function (done) {
+  //
+  //   const debug = util.logTofile(msg, time, (res) => {
+  //     return res
+  //   } );
+  //   expect(debug).to.equal(1);
+  //   done();
+  //
+  // });
+  //
+  // it('colorAndConsole function should be undefined if debug mode is on', function (done) {
+  //
+  //   const debug = util.colorAndConsole(msg, time, (res) => {
+  //     return res
+  //   } );
+  //   console.log(debug);
+  //   expect(debug).to.equal(undefined);
+  //
+  //   done();
+  //
+  // });
 
   it('debug function should return 0 if debug mode is off', function (done) {
     process.env.DEBUG = 'false';
