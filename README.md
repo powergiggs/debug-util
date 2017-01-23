@@ -1,13 +1,13 @@
 # Debug Utility Tool
 
-This is a very easy to use tool that intends to help making 
-logging and console.logging rich. This tool will allow you 
-to have detailed message of what is going on with your project 
+This is a very easy to use tool that intends to help making
+logging and console.logging rich. This tool will allow you
+to have detailed message of what is going on with your project
 while debugging.
 
 As developers we are constantly console.logging here and there
-to check what is returned, what is contained in a variable or 
-to simply add tracks to know how the code is executing. 
+to check what is returned, what is contained in a variable or
+to simply add tracks to know how the code is executing.
 
 This tool allow you to set a message and everything else is done
 for you. The tool will give you the line and file the error happened
@@ -20,13 +20,15 @@ just log to a file or just console log it nicely.
 
 ![console](https://raw.githubusercontent.com/ECorreia45/imgs/master/console.png)
 
-## Installation 
+## Installation
 
 download this repo to your local environment and through terminal
-navigate to the download folder destination and run this following 
+navigate to the download folder destination and run this following
 command to install it:
 
 ``npm install``
+
+
 
 ## Usage
 
@@ -67,6 +69,18 @@ You can pass it a ``0``, ``1``, or ``2`` and it cannot be a string;
 * 1 = Warn;
 * 2 = Info;
 
+sample debug info:
+```
+-- Debugging -----------------
+  Time: 17:19 32
+  !Err: testing util
+  Line: 580
+  File: module.js
+  Func: Module._extensions..js | type: Object | method: .js
+  Data: undefined undefined
+
+```
+
 By default and message is set to be a ``Mesg``
 
 ![defaultMsg](https://raw.githubusercontent.com/ECorreia45/imgs/master/defmesg.png)
@@ -90,16 +104,6 @@ function foo(number){
 
 foo(n);
 
-// --- outputs
-/*- Debugging -----------------
-    Time: 0:15 20
-    Info: what is the number?
-    Line: 7
-    File: /Users/ecorreia/Sites/_tests/debugTool/node_modules/caller-id/lib/caller-id.js
-    Func: getData | type: Object | method: getData
-    Data: number 4
-*/
-
 ```
 
 __Callback function__
@@ -116,6 +120,3 @@ util.debug('what is the number?', 2, number, function (err) {
 
 This callback function is used to see if the tool did its job or failed.
 You will double check if the tool threw an error and you didnt happen to catch it.
-
-
-
