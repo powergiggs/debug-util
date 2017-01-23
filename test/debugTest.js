@@ -46,19 +46,7 @@ describe('Debug Utility', () => {
     const debug = util.grab('--debug');
     expect(debug).to.equal(null)
   });
-
-  it('logTofile function should return 1', function (done) {
-
-    const debug = util.logTofile(msg, time, (res) => {
-      return res
-    } );
-
-    expect(debug).to.equal(1);
-
-    done()
-
-  });
-
+  
   it('colorAndConsole function should return 1 if debug mode is on', function (done) {
 
     const debug = util.colorAndConsole(msg, time, (res) => {

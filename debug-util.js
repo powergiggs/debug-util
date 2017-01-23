@@ -21,12 +21,12 @@ function debug(msg, type, data, callback) {
 
 
   if (!msg) {
-    console.log('You must specify a message THE LEAST. DEBUG module crashed!');
+    console.warn('You must specify a message THE LEAST. DEBUG module crashed!');
     if(callback) return callback(0);
   }
   // make sure no unknown or string type was sent
   if (type > 2 || typeof type === 'string') {
-    console.log(`type of ${type} is invalid. DEBUG module crashed! valid: int[0,1,2]`);
+    console.error(`type of ${type} is invalid. DEBUG module crashed! valid: int[0,1,2]`);
     if(callback) return callback(0);
   }
   // make sure debug mode is set to true
