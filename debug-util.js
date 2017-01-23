@@ -73,6 +73,7 @@ function debug(msg, type, data, callback) {
 });
 }
 
+// this will customize the log message
 function colorAndConsole(msg, time, callback) {
   // set colors
   const mode = '\n-- Debugging -----------------';
