@@ -27,9 +27,5 @@
     "sinon": "^1.17.7",
     "stack-trace": "0.0.9"
   },
-  "engine": "node >= 6.9.4",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
-  }
+  "engine": "node >= 6.9.4"
 }
