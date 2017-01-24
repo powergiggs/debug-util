@@ -28,12 +28,7 @@ command to install it:
 
 ``npm install``
 
-
-
 ### Usage
-
-
-###Debug
 
 You can simply require it to a variable and start using it.
 
@@ -123,7 +118,6 @@ util.debug('what is the number?', 2, number, function (err) {
 
 This callback function is used to see if the tool did its job or failed.
 You will double check if the tool threw an error and you didn't happen to catch it.
-
 
 ### Version Bump
 Version bump accept 2 arguments, the Version

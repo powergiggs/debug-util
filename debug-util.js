@@ -46,17 +46,18 @@ if (DEBUG === 'true') {
 function debug(msg, type, data, callback) {
   // get info about who made the call
   const who = caller();
-
-
+  
   if (!msg) {
     console.warn('You must specify a message THE LEAST. DEBUG module crashed!');
     if (callback) return callback(0);
   }
+  
   // make sure no unknown or string type was sent
   if (type > 2 || typeof type === 'string') {
     console.error(`type of ${type} is invalid. DEBUG module crashed! valid: int[0,1,2]`);
     if(callback) return callback(0);
   }
+  
   // make sure debug mode is set to true
   if (process.env.DEBUG === 'true') {
     // stringify objects is obj was passed
